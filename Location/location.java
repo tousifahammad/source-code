@@ -42,6 +42,14 @@
 
 
     private void getCurrentLocation() {
+		LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        boolean isGPSEnabled = manager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+
+        if (!isGPSEnabled) {
+            Toast.makeText(this, "Please enable GPS and try again", Toast.LENGTH_LONG).show();
+            finish();
+        }
+		
         //create a callback
         LocationProvider.LocationCallback callback = new LocationProvider.LocationCallback() {
 
