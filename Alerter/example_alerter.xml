@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--Simple Alerter-->
+            <Button
+                android:id="@+id/simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="simpleAlerter"
+                android:text="Simple Alerter"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter with Custom Icon-->
+            <Button
+                android:id="@+id/withIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withIcon"
+                android:text="Alerter With Icon"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter Without Title-->
+            <Button
+                android:id="@+id/withOutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withOutTitle"
+                android:text="Alerter without Title"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter With Click Listener-->
+            <Button
+                android:id="@+id/withListener"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withListener"
+                android:text="Alerter With Click Listener"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter With Verbose Text-->
+            <Button
+                android:id="@+id/withVerbose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withVerbose"
+                android:text="Alerter with Verbose Text"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter with Custom Animation-->
+            <Button
+                android:id="@+id/withAnim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withAnim"
+                android:text="Alerter with Animation"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Swipe to Dismiss Alerter-->
+            <Button
+                android:id="@+id/swipeToDismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="swipeDismiss"
+                android:text="Swipe to Dismiss"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter with Progress-->
+            <Button
+                android:id="@+id/withProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withProgress"
+                android:text="Alerter with Progress"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter with Button-->
+            <Button
+                android:id="@+id/withButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="withButton"
+                android:text="Alerter with Buttons"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <!--Alerter with Custom Font-->
+            <Button
+                android:id="@+id/customFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="05dp"
+                android:onClick="customFont"
+                android:text="Alerter with Custom Font"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

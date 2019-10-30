@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_50" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginRight="@dimen/dimen_20"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/empty" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="Referral code"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_referral_code"
+            android:layout_width="@dimen/dimen_150"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/round_gray_2"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="Share this referral code with others" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/margin_40"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="onShareClicked"
+            android:text="share"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_earn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="Do you have any referral code?"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_referral_code"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/border_black"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_marginTop="20dp" />
+
+            <Button
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_10"
+                android:backgroundTint="@color/green"
+                android:onClick="onSubmitClicked"
+                android:text="submit"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                tools:layout_marginTop="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

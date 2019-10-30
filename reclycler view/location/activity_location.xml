@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".location.LocationActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/app_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        app:srcCompat="@mipmap/name" />
+
+    <TextView
+        android:id="@+id/sub_titile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20"
+        android:text="@string/area_sub_title"
+        android:textColor="@color/gray_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_location_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sub_titile"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/no_data_found"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

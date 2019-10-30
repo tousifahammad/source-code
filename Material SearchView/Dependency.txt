@@ -1,0 +1,4 @@
+
+/** Add Dependency in build.gradle(Module: app) **/
+
+implementation 'com.miguelcatalan:materialsearchview:1.4.0'

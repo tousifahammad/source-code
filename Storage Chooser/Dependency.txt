@@ -1,0 +1,7 @@
+
+    /** Add Below Dependency in your build.gradle (Module: app) **/
+    implementation 'com.github.codekidX:storage-chooser:2.0.3'
+
+    /** Add Storage Permission Manifestt.xml**/
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

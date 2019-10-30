@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/add"
+        android:title="Add"
+        android:icon="@android:drawable/ic_input_add"/>
+
+
+    <item android:id="@+id/rem"
+        android:title="Reminder"
+        android:icon="@android:drawable/ic_popup_reminder"/>
+
+</menu>
