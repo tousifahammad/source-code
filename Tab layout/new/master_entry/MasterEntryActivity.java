@@ -1,6 +1,5 @@
-package com.app.haircutuser.mybooking;
+package com.app.cubeapparels.master_entry;
 
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -9,34 +8,34 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.app.haircutuser.R;
-import com.app.haircutuser.home.HomeActivity;
-import com.app.haircutuser.mybooking.fragment.upcoming.UpcomingFragment;
-import com.app.haircutuser.mybooking.fragment.past.PastFragment;
-import com.app.haircutuser.utils.IntentController;
+import com.app.cubeapparels.R;
+import com.app.cubeapparels.addorder.Company;
+import com.app.cubeapparels.addorder.Design;
+import com.app.cubeapparels.allocate_order.Karigar;
+import com.app.cubeapparels.master_entry.fragment.company.CompanyFragment;
+import com.app.cubeapparels.master_entry.fragment.design.DesignFragment;
+import com.app.cubeapparels.master_entry.fragment.karigar.KarigarFragment;
 
 import java.util.ArrayList;
 
-public class MyBookingActivity extends AppCompatActivity implements
-        UpcomingFragment.OnFragmentInteractionListener,
-        PastFragment.OnFragmentInteractionListener,
-        BookingClickListener {
+public class MasterEntryActivity extends AppCompatActivity implements MasterEntryClickListener {
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
     TabLayout tabLayout;
-    MyBookingPresenter presenter;
-    ArrayList<Booking> upcoming_booking_list = new ArrayList<>();
-    ArrayList<Booking> past_booking_list = new ArrayList<>();
+    MasterEntryPresenter presenter;
+    ArrayList<Company> company_list = new ArrayList<>();
+    ArrayList<Design> design_list = new ArrayList<>();
+    ArrayList<Karigar> karigar_list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_booking);
+        setContentView(R.layout.activity_master_entry);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -48,8 +47,8 @@ public class MyBookingActivity extends AppCompatActivity implements
         // set Toolbar
         setToolBar();
 
-        presenter = new MyBookingPresenter(this);
-        presenter.requestMyBooking();
+        presenter = new MasterEntryPresenter(this);
+        presenter.requestCompanyDetails();
     }
 
 //    @Override
@@ -70,9 +69,8 @@ public class MyBookingActivity extends AppCompatActivity implements
     }
 
     private void setToolBar() {
-        AppCompatTextView tv_tooltitle = findViewById(R.id.tv_tooltitle);
-        tv_tooltitle.setVisibility(View.VISIBLE);
-        tv_tooltitle.setText("My bookings");
+        TextView tv_tooltitle = findViewById(R.id.tv_title_center);
+        tv_tooltitle.setText("Master Entry");
 
         findViewById(R.id.ib_back).setOnClickListener(v -> onBackPressed());
     }
@@ -81,43 +79,44 @@ public class MyBookingActivity extends AppCompatActivity implements
     public void onBackPressed() {
         super.onBackPressed();
 
-        String activity_name = getIntent().getStringExtra("activity_name");
-        if (activity_name != null && activity_name.equals("PaymentActivity")) {
-            IntentController.sendIntent(this, HomeActivity.class);
-        }
         finish();
     }
 
 
     void setupViewPager() {
-        if (upcoming_booking_list.size() > 0) {
+        if (company_list.size() > 0) {
             Bundle bundle = new Bundle();
-            bundle.putSerializable("upcoming_booking_list", upcoming_booking_list);
+            bundle.putSerializable("company_list", company_list);
 
-            Fragment fragment = new UpcomingFragment();
+            Fragment fragment = new CompanyFragment();
             fragment.setArguments(bundle);
 
-            mSectionsPagerAdapter.addFragment(fragment, "Upcoming Booking");
+            mSectionsPagerAdapter.addFragment(fragment, "Company");
         }
 
-        if (past_booking_list.size() > 0) {
+        if (design_list.size() > 0) {
             Bundle bundle = new Bundle();
-            bundle.putSerializable("past_booking_list", past_booking_list);
+            bundle.putSerializable("design_list", design_list);
 
-            Fragment fragment = new PastFragment();
+            Fragment fragment = new DesignFragment();
             fragment.setArguments(bundle);
 
-            mSectionsPagerAdapter.addFragment(fragment, "Past Booking");
+            mSectionsPagerAdapter.addFragment(fragment, "Design");
+        }
+
+        if (karigar_list.size() > 0) {
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("karigar_list", karigar_list);
+
+            Fragment fragment = new KarigarFragment();
+            fragment.setArguments(bundle);
+
+            mSectionsPagerAdapter.addFragment(fragment, "Karigar");
         }
 
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         tabLayout.setupWithViewPager(mViewPager);
-    }
-
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
     }
 
 
@@ -153,21 +152,16 @@ public class MyBookingActivity extends AppCompatActivity implements
 
     @Override
     public void onCancelClicked(String booking_id) {
-        presenter.requestBookingCancel(booking_id);
+        Toast.makeText(this, "Not available right now", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onModifyClicked(String booking_id) {
         Toast.makeText(this, "Not available right now", Toast.LENGTH_SHORT).show();
-        //IntentController.gotToActivityNoBack(this, SaloonActivity.class);
     }
 
     @Override
     public void onRemainderChanged(boolean isChecked, String booking_id) {
-        String is_reminder = "N";
-        if (isChecked) {
-            is_reminder = "Y";
-        }
-        presenter.requestRemainder(is_reminder, booking_id);
+        Toast.makeText(this, "Not available right now", Toast.LENGTH_SHORT).show();
     }
 }
