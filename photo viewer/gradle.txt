@@ -1,0 +1,4 @@
+    //PhotoView
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+
+   URL : https://github.com/chrisbanes/PhotoView

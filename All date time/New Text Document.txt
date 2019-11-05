@@ -1,0 +1,5 @@
+https://stackoverflow.com/questions/6537535/check-date-with-todays-date/45296207
+
+DateUtils.isSameDay(date1,date2);
+DateUtils.isSameDay(calender1,calender2);
+DateUtils.isToday(date1);
