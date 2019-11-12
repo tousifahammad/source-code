@@ -1,0 +1,11 @@
+RecyclerView uses one view multiple times, when it contains the list which is not displaying on the screen at a time(means a list contain large amount of items which is not displaying on screen at same time you need to scroll up and down). When user scroll the list the offscreen items are reused to display the remaining list items which is called recycling.
+
+To Stop recycling the items call this method in your onBindViewHolder method:
+
+viewHolder.setIsRecyclable(false);
+This statement stop the recycling the views.
+
+To Start recycling the items call this method in your onBindViewHolder method:
+
+viewHolder.setIsRecyclable(true);
+I hope this will solve your problem. Thanks

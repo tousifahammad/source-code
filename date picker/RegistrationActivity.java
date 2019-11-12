@@ -33,37 +33,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private void initUI() {
         tv_dob = findViewById(R.id.tv_dob);
     }
-        if (et_name.getText().toString().isEmpty()) {
-            Alert.showError(this, "First name : " + getString(R.string.field_empty));
-            return false;
-
-        } else if (!SharedMethods.validateName(et_name.getText().toString().trim())) {
-            Alert.showError(this, "Invalid first name");
-            return false;
-
-        } else if (tv_dob.getText().toString().isEmpty()) {
-            Alert.showError(this, "DOB : " + getString(R.string.field_empty));
-            return false;
-
-        } else if (et_email.getText().toString().isEmpty()) {
-            Alert.showError(this, "Email : " + getString(R.string.field_empty));
-            return false;
-
-        } else if (!SharedMethods.validateEmail(et_email.getText().toString().trim())) {
-            Alert.showError(this, "Invalid email");
-            return false;
-
-        } else if (et_mobile_no.getText().toString().trim().length() != 10) {
-            Alert.showError(this, "Please enter 10 digit mobile number");
-            return false;
-
-        } else if (et_location.getText().toString().isEmpty()) {
-            Alert.showError(this, "Location : " + getString(R.string.field_empty));
-            return false;
-        }
-
-        return true;
-    }
+    
 
 
     public void pickDate(View view) {

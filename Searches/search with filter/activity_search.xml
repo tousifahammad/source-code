@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:layout_editor_absoluteX="0dp">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/square_white"
+        android:drawableLeft="@mipmap/searchtwo"
+        android:drawablePadding="@dimen/margin_10"
+        android:elevation="5dp"
+        android:gravity="center_vertical"
+        android:hint="Search by company"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_20"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_50"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/square_white"
+        android:drawableRight="@mipmap/go"
+        android:drawablePadding="@dimen/margin_10"
+        android:gravity="center"
+        android:elevation="5dp"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10"
+        android:text="Search"
+        android:onClick="onSearchClicked"
+        app:layout_constraintBottom_toBottomOf="@+id/et_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_search"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <Button
+        android:id="@+id/btn_company"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/White"
+        android:onClick="onByCompanyClicked"
+        android:text="by company"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_design"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/et_search" />
+
+    <Button
+        android:id="@+id/btn_design"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/White"
+        android:onClick="onByDesignClicked"
+        android:text="by design"
+        android:textColor="@color/darkGray"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_company"
+        app:layout_constraintEnd_toEndOf="@+id/textView13"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_company"
+        app:layout_constraintTop_toTopOf="@+id/btn_company" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableLeft="@mipmap/datewise"
+        android:drawablePadding="@dimen/margin_10"
+        android:gravity="center_vertical"
+        android:text="Filter by datewise"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/btn_company"
+        app:layout_constraintTop_toBottomOf="@+id/btn_company" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="From date"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <TextView
+        android:id="@+id/tv_from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/White"
+        android:drawableRight="@mipmap/calendar"
+        android:drawablePadding="@dimen/dimen_20"
+        android:elevation="2dp"
+        android:hint="01-04-1993"
+        android:onClick="onCalenderClicked"
+        android:padding="@dimen/dimen_5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView29"
+        app:layout_constraintEnd_toStartOf="@+id/textView32"
+        app:layout_constraintStart_toEndOf="@+id/textView29"
+        app:layout_constraintTop_toTopOf="@+id/textView29"
+        app:srcCompat="@mipmap/fromto" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To date"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/tv_to_date"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tv_to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@color/White"
+        android:drawableRight="@mipmap/calendar"
+        android:drawablePadding="@dimen/dimen_20"
+        android:elevation="2dp"
+        android:hint="01-04-2019"
+        android:onClick="onCalenderClicked"
+        android:padding="@dimen/dimen_5"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_from_date"
+        app:layout_constraintEnd_toEndOf="@+id/btn_design"
+        app:layout_constraintTop_toTopOf="@+id/tv_from_date" />
+
+    <TextView
+        android:id="@+id/tv_search_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:text="Search results"
+        android:textAllCaps="true"
+        android:textColor="@color/White"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_design"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView26"
+        app:layout_constraintTop_toBottomOf="@+id/tv_from_date" />
+
+    <ProgressBar
+        android:id="@+id/pb_horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/White"
+        android:progressTint="@color/White"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/tv_search_result"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_search_result"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_result" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_order_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_search_result"
+        app:layout_constraintStart_toStartOf="@+id/tv_search_result"
+        app:layout_constraintTop_toBottomOf="@id/pb_horizontal">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
