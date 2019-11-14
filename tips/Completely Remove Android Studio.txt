@@ -1,0 +1,25 @@
+To Completely Remove Android Studio from Windows:
+
+Step 1: Run the Android Studio uninstaller
+
+The first step is to run the uninstaller. Open the Control Panel and under Programs, select Uninstall a Program. After that, click on "Android Studio" and press Uninstall. If you have multiple versions, uninstall them as well.
+
+Step 2: Remove the Android Studio files
+
+To delete any remains of Android Studio setting files, in File Explorer, go to your user folder (%USERPROFILE%), and delete .android, .AndroidStudio and any analogous directories with versions on the end, i.e. .AndroidStudio1.2, as well as .gradle and .m2 if they exist.
+
+Then go to %APPDATA% and delete the JetBrains directory.
+
+Finally, go to C:\Program Files and delete the Android directory.
+
+Step 3: Remove SDK
+
+To delete any remains of the SDK, go to %LOCALAPPDATA% and delete the Androiddirectory.
+
+Step 4: Delete Android Studio projects
+
+Android Studio creates projects in a folder %USERPROFILE%\AndroidStudioProjects, which you may want to delete.
+
+If you like this answer please upvote and follow for awesome answers
+
+Happy learning

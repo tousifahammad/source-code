@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/object"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/brandlogo" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnJumpFromDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="jumpFromDownAnim"
+                    android:text="Jump From Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnJumpToDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="jumpToDownAnim"
+                    android:text="Jump To Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnJumpFromRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="jumpFromRightAnim"
+                    android:text="Jump From Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnJumpToRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="jumpToRightAnim"
+                    android:text="Jump To Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnRollFromDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="rollFromDownAnim"
+                    android:text="Roll From Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnRollToDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="rollToDownAnim"
+                    android:text="Roll To Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnRollFromRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="rollFromRightAnim"
+                    android:text="Roll From Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnRollToRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="rollToRightAnim"
+                    android:text="Roll To Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnScaleUp"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="scaleUp"
+                    android:text="Scale Up"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnScaleDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="scaleDown"
+                    android:text="Scale Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnFallDown"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="fallDown"
+                    android:text="Fall Down"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnSlideOutRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="slideOutRight"
+                    android:text="Slide Out Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/object"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/brandlogo" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnFadeIn"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="fadeInAnim"
+                    android:text="Fade In"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnFadeOut"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="fadeOutAnim"
+                    android:text="Fade Out"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnBounce"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="bounce"
+                    android:text="Bounce"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnBlink"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="blink"
+                    android:text="Blink"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnMove"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="move"
+                    android:text="Move"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnRotate"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="rotate"
+                    android:text="Rotate"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnSlideBottom"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="slideBottom"
+                    android:text="Slide Bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnSlideUp"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="slideUp"
+                    android:text="Slide Up"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnSlideLeft"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="slideLeft"
+                    android:text="Slide Left"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnSlideRight"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="slideRight"
+                    android:text="Slide Right"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/btnZoomIn"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="zoomIn"
+                    android:text="Zoom In"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <Button
+                    android:id="@+id/btnZoomOut"
+                    android:layout_width="00dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:onClick="zoomOut"
+                    android:text="Zoom Out"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
