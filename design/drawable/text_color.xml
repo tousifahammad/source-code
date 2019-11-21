@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <!-- <item
+        android:state_focused="true"
+        android:state_pressed="true"
+        android:color="#000000" />
+    <item
+        android:state_focused="false"
+        android:state_pressed="true"
+        android:color="#000000" />
+
+    <item android:color="#3F51B5"/>-->
+
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxx-->
+
+    <!--&lt;!&ndash; default &ndash;&gt;
+    <item
+        android:state_pressed="false"
+        android:state_focused="false"
+        android:color="#000000"
+        >
+
+    </item>
+
+    &lt;!&ndash; button focused &ndash;&gt;
+    <item
+        android:state_pressed="false"
+        android:state_focused="true"
+        android:color="#27AAA6"
+        >
+       </item>
+
+    &lt;!&ndash; button pressed &ndash;&gt;
+    <item
+        android:state_pressed="true"
+        android:state_focused="false"
+        android:color="#AA2727"
+        >
+        </item>
+
+
+-->
+
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <!--<item android:state_focused="true" android:state_pressed="true"
+        android:color="#CA0707" />
+    <item android:state_focused="false" android:state_pressed="true"
+        android:color="@color/CornflowerBlue" />
+    <item android:color="#000000" />-->
+
+
+    <item android:color="#CA0707" android:state_selected="true"></item>
+    <item android:color="@color/CornflowerBlue" android:state_pressed="true"></item>
+    <item android:color="#000000"></item>
+
+</selector>

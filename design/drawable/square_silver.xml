@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <item>
+        <shape>
+            <!-- set the shadow2 color here -->
+            <stroke
+                android:width="0dp"
+                android:color="#77c9c9c9" />
+        </shape>
+    </item>
+
+    <!-- Background -->
+
+    <item>
+        <shape>
+            <solid android:color="#f2f2f2" />
+        </shape>
+    </item>
+</layer-list>
