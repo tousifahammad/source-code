@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardElevation="5dp"
+    card_view:cardMaxElevation="5dp"
+    card_view:contentPadding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="@dimen/margin_50"
+            android:layout_height="@dimen/margin_50"
+            android:scaleType="centerInside"
+            android:src="@mipmap/launcher"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Apk_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginTop="5dp"
+            android:text="NA"
+            android:textColor="#000"
+            android:textSize="14sp"
+            card_view:layout_constraintLeft_toRightOf="@id/imageview"
+            card_view:layout_constraintStart_toEndOf="@id/imageview"
+            card_view:layout_constraintTop_toTopOf="@+id/imageview"
+            card_view:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/Apk_Package_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="NA"
+            android:textColor="#795548"
+            android:textSize="12sp"
+            card_view:layout_constraintStart_toStartOf="@+id/Apk_Name"
+            card_view:layout_constraintTop_toBottomOf="@+id/Apk_Name" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="status"
+            android:textColor="@color/colorOrange"
+            android:textSize="10sp"
+            android:visibility="visible"
+            card_view:layout_constraintBottom_toBottomOf="@+id/Apk_Name"
+            card_view:layout_constraintStart_toEndOf="@+id/Apk_Name"
+            card_view:layout_constraintTop_toTopOf="@+id/Apk_Name" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

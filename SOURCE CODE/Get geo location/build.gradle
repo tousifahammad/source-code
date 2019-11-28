@@ -1,0 +1,8 @@
+dependencies {
+
+    //dexter
+    implementation 'com.karumi:dexter:5.0.0'
+
+    //location provider
+    implementation 'com.github.david-serrano:locationprovider:1.2'
+}

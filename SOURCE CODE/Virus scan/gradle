@@ -1,0 +1,3 @@
+    //wave view
+    implementation 'com.yangping:ypwaveview:1.0.3'
+    implementation 'com.narayanacharya:WaveView:0.9.4'
