@@ -42,20 +42,26 @@ For example:
 
 Intent i = new Intent(this, SecondActivity.class);
 startActivityForResult(i, 1);
-In your SecondActivity set the data which you want to return back to FirstActivity. If you don't want to return back, don't set any.
 
-For example: In SecondActivity if you want to send back data:
+//In your SecondActivity set the data which you want to return back to FirstActivity. If you don't want to return back, don't set any.
+
+//For example: In SecondActivity if you want to send back data:
 
 Intent returnIntent = new Intent();
 returnIntent.putExtra("result",result);
 setResult(Activity.RESULT_OK,returnIntent);
 finish();
-If you don't want to return data:
+
+
+
+//If you don't want to return data:
 
 Intent returnIntent = new Intent();
 setResult(Activity.RESULT_CANCELED, returnIntent);
 finish();
-Now in your FirstActivity class write following code for the onActivityResult() method.
+
+
+//Now in your FirstActivity class write following code for the onActivityResult() method.
 
 @Override
 protected void onActivityResult(int requestCode, int resultCode, Intent data) {
