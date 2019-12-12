@@ -1,0 +1,11 @@
+    private void openAppInfo(String package_name) {
+        try {    //Open the specific App Info page:
+            Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            intent.setData(Uri.parse("package:" + package_name));
+            context1.startActivity(intent);
+
+        } catch (ActivityNotFoundException e) {     //Open the generic Apps page:
+            Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
+            context1.startActivity(intent);
+        }
+    }
