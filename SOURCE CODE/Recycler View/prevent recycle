@@ -3,19 +3,7 @@ RecyclerView uses one view multiple times, when it contains the list which is no
 To Stop recycling the items call this method in your onBindViewHolder method:
 
 
-
-
-
-
-
-
 viewHolder.setIsRecyclable(false);
-
-
-
-
-
-
 
 
 
@@ -24,4 +12,5 @@ This statement stop the recycling the views.
 To Start recycling the items call this method in your onBindViewHolder method:
 
 viewHolder.setIsRecyclable(true);
+
 I hope this will solve your problem. Thanks
