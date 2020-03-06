@@ -1,0 +1,3 @@
+        <service
+            android:name=".MyIntentService"
+            android:exported="false" />
