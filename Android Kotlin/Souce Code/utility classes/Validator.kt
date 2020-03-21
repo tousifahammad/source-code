@@ -1,6 +1,10 @@
-package net.simplifiedcoding.mvvmsampleapp.util
+package com.webgrity.tisha.util
 
 import android.content.Context
+import android.util.Patterns
+import android.webkit.URLUtil
+import android.widget.EditText
+import com.google.android.material.textfield.TextInputLayout
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
 import org.kodein.di.generic.instance
@@ -10,9 +14,9 @@ import java.util.regex.Pattern
 
 //Validate name, email, mobile, etc
 
-object Validator : KodeinAware {
-    override val kodein by kodein()
-    private val context: Context by instance()
+object Validator/* : KodeinAware*/ {
+    //override val kodein by kodein()
+    //private val context: Context by instance()
 
     fun isNameValid(txt: String?): Boolean {
         val regx = "^[\\p{L} .'-]+$"
@@ -23,7 +27,7 @@ object Validator : KodeinAware {
             return true
         }
         //Alert.showError(activity, "Invalid Name")
-        context.toast("Invalid Name")
+        //context.toast("Invalid Name")
         return false
     }
 
@@ -33,7 +37,7 @@ object Validator : KodeinAware {
         val pattern: Pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
         val matcher: Matcher = pattern.matcher(inputStr)
         if (!matcher.matches()) {
-            context.toast("Invalid email")
+            //context.toast("Invalid email")
             return false
         }
         return true
@@ -42,7 +46,7 @@ object Validator : KodeinAware {
 
     fun isPasswordValid(password: String): Boolean {
         if (password.length < 5) {
-            context.toast("Password must contains at least 5 character")
+            //context.toast("Password must contains at least 5 character")
             return false
         }
         return true
@@ -65,7 +69,28 @@ object Validator : KodeinAware {
         if (m.find() && m.group().equals(s)) {
             return true
         }
-        context.toast("Invalid mobile number")
+        //context.toast("Invalid mobile number")
         return false
+    }
+
+    fun isNullOrEmpty(
+        editText: EditText,
+        textInputLayout: TextInputLayout?,
+        message: String
+    ): Boolean {
+        return if (editText.text.isNullOrEmpty()) {
+            textInputLayout?.error = message
+            textInputLayout?.requestFocus()
+            true
+        } else {
+            textInputLayout?.error = ""
+            false
+        }
+    }
+
+
+    fun isWebAddressValid(url: String): Boolean {
+        //if (url.isNullOrEmpty()) return false
+        return Patterns.WEB_URL.matcher(url).matches()
     }
 }

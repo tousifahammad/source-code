@@ -1,4 +1,4 @@
-package net.simplifiedcoding.mvvmsampleapp.util
+package com.webgrity.tisha.util
 
 import android.content.Context
 import android.view.View

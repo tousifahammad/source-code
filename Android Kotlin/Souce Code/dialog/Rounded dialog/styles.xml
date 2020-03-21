@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Status bar color (even if colorPrimaryVariant is set) -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+<!--        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>-->
+<!--        <item name="colorOnPrimary">@color/colorOnPrimary</item>-->
+<!--        <item name="colorSecondary">@color/colorSecondary</item>-->
+<!--        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>-->
+<!--        <item name="colorOnSecondary">@color/colorOnSecondary</item>-->
+
+<!--        &lt;!&ndash; Additional colors &ndash;&gt;-->
+<!--        <item name="android:colorBackground">@color/colorBackground</item>-->
+<!--        <item name="colorOnBackground">@color/colorOnBackground</item>-->
+<!--        <item name="colorSurface">@color/colorSurface</item>-->
+<!--        <item name="colorOnSurface">@color/colorOnSurface</item>-->
+<!--        <item name="colorError">@color/colorError</item>-->
+<!--        <item name="colorOnError">@color/colorOnError</item>-->
+
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorSecondary">@color/colorText</item>
+        <!-- i.e. Edit text cursor color -->
+        <item name="android:colorControlActivated">@color/colorControlActivated</item>
+        <!-- i.e. Ripple effect color -->
+        <item name="android:colorControlHighlight">@color/colorControlHighlight</item>
+
+    </style>
+
+
+    <style name="RoundedCornersDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="dialogCornerRadius">20dp</item>
+    </style>
+
+</resources>
