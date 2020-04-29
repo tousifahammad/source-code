@@ -1,0 +1,26 @@
+    private fun initViewPager() {
+        try {
+            val adapter = ViewPagerAdapter(supportFragmentManager)
+
+            val results = floorRepository.getAllData() ?: return
+            for (floor: Floor in results) {
+                adapter.addFragment(ShowTablesFragments.newInstance(floor.id))
+            }
+            viewPager.adapter = adapter
+
+            viewPager.addOnPageChangeListener(object : OnPageChangeListener {
+                override fun onPageScrollStateChanged(state: Int) {
+}
+                override fun onPageScrolled(position: Int, positionOffset: Float,positionOffsetPixels: Int) {
+                    tv_floor_name.text = "Tisha | ${results[position].name}"
+                }
+
+                override fun onPageSelected(position: Int) {
+                    // Check if this is the page you want.
+                }
+            })
+
+        } catch (error: Exception) {
+            Log.d(AppData.TAG, "Error : ${error.printStackTrace()}")
+        }
+    }

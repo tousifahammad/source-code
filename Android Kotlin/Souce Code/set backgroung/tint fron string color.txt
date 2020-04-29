@@ -1,0 +1,1 @@
+menuItemColor.backgroundTintList = ColorStateList.valueOf(Color.parseColor(getColorCode(menuCategory.colourId)))

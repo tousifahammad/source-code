@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/29575436/allow-user-to-control-height-and-width-of-a-view-by-ontouch

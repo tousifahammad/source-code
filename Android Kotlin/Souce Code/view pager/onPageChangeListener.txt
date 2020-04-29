@@ -1,0 +1,12 @@
+viewPager.addOnPageChangeListener(object : OnPageChangeListener {
+                override fun onPageScrollStateChanged(state: Int) {
+		}
+
+                override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                    tv_floor_name.text = "Tisha | ${results[position].name}"
+                }
+
+                override fun onPageSelected(position: Int) {
+                    // Check if this is the page you want.
+                }
+            })

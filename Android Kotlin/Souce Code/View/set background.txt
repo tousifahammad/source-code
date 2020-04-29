@@ -1,0 +1,3 @@
+cl_root_floor.background = ContextCompat.getDrawable(this, R.drawable.ic_graph) 
+
+cl_root_floor.setBackgroundColor(ContextCompat.getColor(this, R.color.White))
