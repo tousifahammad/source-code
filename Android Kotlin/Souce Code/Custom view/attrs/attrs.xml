@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MenuCardView">
+        <attr name="image" format="reference"/>
+        <attr name="text" format="string"/>
+        <attr name="desc" format="string"/>
+        <attr name="flip" format="boolean"/>
+        <attr name="valuecolor" format="color"/>
+        <attr name="textcolor" format="color"/>
+        <attr name="card_width" format="dimension" />
+        <attr name="card_height" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyNumberPicker">
+        <attr name="mytext" format="string" />
+        <attr name="mytextcolor" format="color"/>
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension"/>
+        <attr name="myvalue" format="string"/>
+        <attr name="myminValue" format="integer"/>
+        <attr name="mymaxValue" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomSelectButton">
+        <attr name="csb_hint" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomViewSwitch">
+        <attr name="cvs_text" format="string"/>
+    </declare-styleable>
+
+</resources>

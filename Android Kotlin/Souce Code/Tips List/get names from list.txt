@@ -1,0 +1,2 @@
+var selectedPrinters = selectedPrinterList.map { it.name }.toString()
+selectedPrinters = selectedPrinters.substring(1, selectedPrinters.length-1)

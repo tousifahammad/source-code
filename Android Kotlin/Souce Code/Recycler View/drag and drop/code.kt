@@ -20,6 +20,10 @@ private fun setUpRecyclerView() {
                 }
                 return true
             }
+			
+			override fun isLongPressDragEnabled(): Boolean {
+                return isSortingEnable
+            }
         })
         itemTouchHelper.attachToRecyclerView(rootView.rv_menu_items_list)
     }

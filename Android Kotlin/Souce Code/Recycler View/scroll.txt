@@ -1,0 +1,7 @@
+1. rv_menu_items_list.smoothScrollToPosition(list.size - 1)
+
+2. rootView.rv_menu_items_list.scrollToPosition(list.size - 1)
+
+3. 
+
+

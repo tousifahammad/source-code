@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_select_menu_category"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/category_settings_menu_item">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="60dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/bg_two_side_rectangular_corner"
+        android:foreground="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/til_select"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_select"
+        style="@style/OutlineEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Hint"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_select"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:editable="false"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_medium" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view_select"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00FFFFFF"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
