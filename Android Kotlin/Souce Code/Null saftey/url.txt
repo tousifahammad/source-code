@@ -1,0 +1,1 @@
+https://www.geeksforgeeks.org/kotlin-null-safety/#:~:text=So%2C%20Kotlin%20has%20a%20Safe,call%20in%20a%20single%20expression.

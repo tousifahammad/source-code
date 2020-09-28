@@ -1,0 +1,1 @@
+httpsblog.mindorks.comimplementing-dialog-fragment-in-android

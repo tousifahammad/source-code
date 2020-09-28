@@ -1,0 +1,1 @@
+viewPager_ui.setOnTouchListener { v, event -> true }

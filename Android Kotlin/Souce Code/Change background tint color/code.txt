@@ -1,0 +1,3 @@
+private fun setTintColor(textView: TextView, color: Int) {
+        DrawableCompat.setTint(DrawableCompat.wrap(textView.background).mutate(), ContextCompat.getColor(this, color))
+    }
