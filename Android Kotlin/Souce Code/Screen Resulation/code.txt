@@ -1,0 +1,17 @@
+    fun getScreenResolution(context: Context): Pair<Int, Int> {
+        try {
+            val wm = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val display = wm.defaultDisplay
+            val metrics = DisplayMetrics()
+            display.getMetrics(metrics)
+            val width = metrics.widthPixels
+            val height = metrics.heightPixels
+            //Log.d(AppData.TAG, "screenSize: $width, $height")
+            return Pair(width, height)
+
+        } catch (error: Exception) {
+            Log.d(AppData.TAG, "Error : autoCreateTable()", error)
+        }
+
+        return Pair(0, 0)
+    }

@@ -1,0 +1,14 @@
+private val preferenceProvider: PreferenceProvider by instance()    
+
+//saving it to manage quick setup button in menu dialog
+    private fun storeCompletedSteps(step: Int) {
+        try {
+            val list = preferenceProvider.getArrayList(PreferenceProvider.COMPLETED_QUICK_SETUP_STEPS)
+            if (step.toString() !in list) {
+                list.add(step.toString())
+                preferenceProvider.saveArrayList(PreferenceProvider.COMPLETED_QUICK_SETUP_STEPS, list)
+            }
+        } catch (error: Exception) {
+            Log.d(AppData.TAG, "Error : autoCreateTable()", error)
+        }
+    }

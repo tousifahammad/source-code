@@ -57,5 +57,19 @@ class PreferenceProvider(context: Context) {
     fun getLong(key: String): Long? {
         return preference.getLong(key, 0)
     }
+	
+	fun saveArrayList(key: String, list: ArrayList<String>) {
+        val json: String = Gson().toJson(list)
+        preference.edit().putString(key, json).apply()
+    }
+
+    fun getArrayList(key: String): ArrayList<String> {
+        var list = ArrayList<String>()
+        val type: Type = object : TypeToken<ArrayList<String>>() {}.type
+        preference.getString(key, null)?.let {
+            list = Gson().fromJson(it, type)
+        }
+        return list
+    }
 
 }

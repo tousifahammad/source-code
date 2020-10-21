@@ -1,0 +1,19 @@
+https://stackoverflow.com/questions/47307782/how-to-return-multiple-values-from-a-function-in-kotlin-like-we-do-in-swift
+
+
+val (x, y) = getLocationOnScreen(cl_floor_plan_body)
+Log.d(AppData.TAG, "autoCreateTable : x= $x y= $y")
+
+
+fun getLocationOnScreen(view: View): Pair<Int, Int> {
+       
+    return Pair(1, 2)
+}
+
+=============================
+var (a, b, c) = getTime()
+
+fun getTime(): Triple<Int, Int, Int> {
+   
+    return Triple( 1, 2, 3)
+}

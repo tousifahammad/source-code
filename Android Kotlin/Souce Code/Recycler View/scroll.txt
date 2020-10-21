@@ -5,3 +5,4 @@
 3. 
 
 
+(rv_menu_category_center.layoutManager as LinearLayoutManager).scrollToPositionWithOffset(it, 0)
