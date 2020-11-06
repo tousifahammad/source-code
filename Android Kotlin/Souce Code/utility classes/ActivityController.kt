@@ -1,16 +1,20 @@
-package com.webgrity.tisha.util
+package util
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
-import android.os.Parcelable
+import android.os.Build
 
 
 object ActivityController {
 
     fun gotToActivity(context: Context, cls: Class<*>?) {
         try {
-            Intent(context, cls).also { context.startActivity(it) }
+            Intent(context, cls).also {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                }
+                context.startActivity(it)
+            }
         } catch (e: Exception) {
             e.printStackTrace()
         }

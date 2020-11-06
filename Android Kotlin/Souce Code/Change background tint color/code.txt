@@ -1,3 +1,7 @@
 private fun setTintColor(textView: TextView, color: Int) {
         DrawableCompat.setTint(DrawableCompat.wrap(textView.background).mutate(), ContextCompat.getColor(this, color))
     }
+
+
+2.text view drawable top tint color______
+ textView.compoundDrawables[1]?.setTint(resources.getColor(R.color.colorPrimary))
