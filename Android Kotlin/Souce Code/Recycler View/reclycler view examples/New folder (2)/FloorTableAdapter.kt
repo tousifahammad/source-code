@@ -23,6 +23,10 @@ class FloorTableAdapter(private val viewModel: SelectTableViewModel) : RecyclerV
     override fun getItemCount(): Int {
         return viewModel.floorTableList.size
     }
+	
+	override fun getItemViewType(position: Int): Int {
+        return position
+    }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvFloorName: TextView = itemView.findViewById(R.id.tv_floor)

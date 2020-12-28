@@ -1,0 +1,17 @@
+======= Flevix.com =======
+Thank you for downloading this item.
+
+
+
+Circle Preloader-Features:
+1. Easy to Use
+2. Clean Design
+3. Transparent Background
+3. Resolutions: Resizeable
+
+Circle Preloader-Files:
+1. 1 SVG Animation File
+2. 1 Information File
+
+How to Include:
+<img src=”svgfilename.svg” alt=”altername name”>

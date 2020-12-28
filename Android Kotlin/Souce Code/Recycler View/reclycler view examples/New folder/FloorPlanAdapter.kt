@@ -32,6 +32,10 @@ class FloorPlanAdapter(
     override fun getItemCount(): Int {
         return list!!.size
     }
+	
+	override fun getItemViewType(position: Int): Int {
+        return position
+    }
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvFloorName: TextView? = null

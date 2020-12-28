@@ -1,0 +1,11 @@
+    class TableOptionsDialog(private val mContext: Context, private val onclick: (Int) -> Unit){
+	calling:   onclick(1)
+    }
+
+
+
+    TableOptionsDialog(requireContext(), onTableOptionClick)
+
+    private val onTableOptionClick = fun(type: Int) {
+	requireContext().toast("$type")
+    }

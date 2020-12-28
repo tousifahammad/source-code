@@ -1,0 +1,19 @@
+animateBetweenColors(tv_header_right, Color.TRANSPARENT, Color.BLUE, 700)
+
+
+    var colorAnimation: ValueAnimator? = null
+    fun animateBetweenColors(viewToAnimateItsBackground: View, colorFrom: Int, colorTo: Int, durationInMs: Int) {
+        val colorDrawable = ColorDrawable(if (durationInMs > 0) colorFrom else colorTo)
+        ViewCompat.setBackground(viewToAnimateItsBackground, colorDrawable)
+        if (durationInMs > 0) {
+            colorAnimation = ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo)
+            colorAnimation?.addUpdateListener { animator: ValueAnimator ->
+                colorDrawable.color = (animator.animatedValue as Int)
+                ViewCompat.setBackground(viewToAnimateItsBackground, colorDrawable)
+            }
+            colorAnimation?.duration = durationInMs.toLong()
+            colorAnimation?.repeatCount = Animation.INFINITE
+            colorAnimation?.repeatMode = ValueAnimator.REVERSE
+            colorAnimation?.start()
+        }
+    }
