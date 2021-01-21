@@ -1,0 +1,11 @@
+val myDrawable = view.background as GradientDrawable
+        myDrawable.setColor(ContextCompat.getColor(view.context, R.color.White))
+        myDrawable.setStroke(2, ContextCompat.getColor(view.context, R.color.DodgerBlue))
+
+                //view.setBackgroundResource(R.drawable.bg_circle_light_blue)
+                //view.foreground = ContextCompat.getDrawable(view.context, R.drawable.table_circle_ripple)
+
+                myDrawable.shape = GradientDrawable.OVAL
+                myDrawable.cornerRadius = 30f
+                view.background = myDrawable
+                view.foreground = ContextCompat.getDrawable(view.context, R.drawable.table_circle_ripple)

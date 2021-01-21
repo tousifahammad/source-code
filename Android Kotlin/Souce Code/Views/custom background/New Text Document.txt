@@ -1,0 +1,5 @@
+val gd = it.background as GradientDrawable
+                            //gd.setColor(Color.RED)
+                            //gd.cornerRadius = 10f
+                            gd.setStroke(2, Color.GREEN)
+                            it.background = gd

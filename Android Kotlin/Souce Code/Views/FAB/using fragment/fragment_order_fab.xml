@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.webgrity.tisha.ui.fragment.order_fab.OrderFabViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        android:visibility="@{viewmodel.fabVisibilityLD ? View.VISIBLE : View.GONE}">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:visibility="@{viewmodel.rvVisibilityLD? View.VISIBLE:View.GONE}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/tv_fab"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:reverseLayout="true"
+            tools:itemCount="3"
+            tools:listitem="@layout/row_fab" />
+
+        <TextView
+            android:id="@+id/tv_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_circle_blue"
+            android:elevation="8dp"
+            android:foreground="@drawable/logout_btn_ripple"
+            android:gravity="center"
+            android:paddingTop="4dp"
+            android:text="@{viewmodel.totalOrderCountLD.toString()}"
+            android:onClick="@{viewmodel.onFabClick}"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

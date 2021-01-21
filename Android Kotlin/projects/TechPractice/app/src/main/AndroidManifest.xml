@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.motionlayoutdemo">
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MotionLayoutDemo"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".list.realm_rv.RealmRvActivity"/>
+        <activity android:name=".roomdb.RoomActivity" />
+        <activity android:name=".async.flow.FlowActivity" />
+        <activity android:name=".motion.MotionActivity" />
+        <activity android:name=".realm.ReamActivity" />
+        <activity android:name=".list.data_binding.recycler_view.MoviesActivity" />
+        <activity android:name=".livedata.LiveDataActivity" />
+        <activity android:name=".generic.GenericActivity" />
+        <activity android:name=".async.coroutines.CoroutineActivity" />
+        <activity
+            android:name=".fab.FabActivity"
+            android:label="@string/title_activity_fab"
+            android:theme="@style/Theme.MotionLayoutDemo.NoActionBar" />
+        <activity android:name=".main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

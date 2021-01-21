@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.webgrity.tisha.ui.activities.floor.main_floor.FloorViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_root_floor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/GhostWhite"
+        android:clipToPadding="false">
+
+
+        <LinearLayout
+            android:id="@+id/ll_fb_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="@dimen/appbarHeight"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

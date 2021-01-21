@@ -1,5 +1,6 @@
 package com.webgrity.tisha.ui.fragment.order_fab
 
+import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -13,10 +14,8 @@ import com.webgrity.tisha.data.models.Status
 import com.webgrity.tisha.data.preferences.PreferenceProvider
 import com.webgrity.tisha.data.preferences.PreferenceProvider.Companion.LAST_ONLINE_ORDER_COUNT
 import com.webgrity.tisha.data.repositories.TableRepository
-import com.webgrity.tisha.ui.customview.fab.Fab
-import com.webgrity.tisha.ui.customview.fab.FabAdapter
 import com.webgrity.tisha.util.asLiveData
-import com.webgrity.tisha.util.logD
+import com.webgrity.tisha.util.clickEffect
 import io.realm.Realm
 import kotlinx.coroutines.launch
 import org.kodein.di.Kodein
@@ -35,11 +34,18 @@ class OrderFabViewModel(mkodein: Kodein) : ViewModel(), KodeinAware {
     val totalFabList = ArrayList<Fab>()
     private val billFabList = ArrayList<Fab>()
 
-    var totalOrderCount: MutableLiveData<Int> = MutableLiveData()
-    var fabVisibility: MutableLiveData<Boolean> = MutableLiveData()
-    var playSound: MutableLiveData<Boolean> = MutableLiveData()
+    //data bind
+    var totalOrderCountLD: MutableLiveData<Int> = MutableLiveData()
+    var playSoundLD: MutableLiveData<Boolean> = MutableLiveData()
+    var fabVisibilityLD: MutableLiveData<Boolean> = MutableLiveData()
+    var rvVisibilityLD: MutableLiveData<Boolean> = MutableLiveData()
 
     init {
+        totalOrderCountLD.value = 0
+        fabVisibilityLD.value = false
+        rvVisibilityLD.value = false
+        playSoundLD.value = false
+
         onlineFab = Fab().also { fab ->
             fab.type = "order"
             fab.name = "Online Order"
@@ -74,6 +80,13 @@ class OrderFabViewModel(mkodein: Kodein) : ViewModel(), KodeinAware {
             .equalTo("billStatus", Status.billRequested)
             .findAllAsync()
             .asLiveData()
+    }
+
+    fun onFabClick(view: View) {
+        view.clickEffect()
+        rvVisibilityLD.value?.let {
+            rvVisibilityLD.value = !it
+        }
     }
 
     fun updateBills(invoiceList: MutableList<Invoice>) {
@@ -116,11 +129,11 @@ class OrderFabViewModel(mkodein: Kodein) : ViewModel(), KodeinAware {
             fabAdapter?.notifyDataSetChanged()
 
             val count = totalFabList.map { it.count }.sum()
-            totalOrderCount.value = count
-            fabVisibility.value = count > 0
+            totalOrderCountLD.value = count
+            fabVisibilityLD.value = count > 0
 
             if (count > preferenceProvider.getInt(LAST_ONLINE_ORDER_COUNT)) {
-                playSound.value = true
+                playSoundLD.value = true
             }
             preferenceProvider.saveInt(LAST_ONLINE_ORDER_COUNT, count)
         } catch (error: Exception) {

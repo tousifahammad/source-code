@@ -1,0 +1,5 @@
+link: https://stackoverflow.com/questions/6330200/how-to-quit-android-application-programmatically
+
+android.os.Process.killProcess(android.os.Process.myPid())
+or
+killProcess(myPid())

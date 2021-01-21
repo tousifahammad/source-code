@@ -7,12 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.webgrity.tisha.databinding.FragmentOrderFabBinding
-import com.webgrity.tisha.ui.customview.fab.Fab
-import com.webgrity.tisha.ui.customview.fab.FabAdapter
-import com.webgrity.tisha.util.clickEffect
 import com.webgrity.tisha.util.getViewModel
 import com.webgrity.tisha.util.playNotificationSound
-import com.webgrity.tisha.util.toggleVisibility
 import kotlinx.android.synthetic.main.layout_fab.*
 import kotlinx.coroutines.launch
 import org.kodein.di.KodeinAware
@@ -43,11 +39,6 @@ class OrderFabFragment(private val onFabClicked: (fab: Fab) -> Unit) : Fragment(
     private fun setUpFab() {
         viewModel.fabAdapter = FabAdapter(viewModel.totalFabList, onFabClicked)
         rv_fab.adapter = viewModel.fabAdapter
-
-        tv_fab.setOnClickListener {
-            it.clickEffect()
-            binding.rvFab.toggleVisibility()
-        }
     }
 
     private fun initObservers() {
@@ -62,7 +53,7 @@ class OrderFabFragment(private val onFabClicked: (fab: Fab) -> Unit) : Fragment(
             viewModel.updateBills(it.toMutableList())
         }
 
-        viewModel.playSound.observe(requireActivity()) {
+        viewModel.playSoundLD.observe(requireActivity()) {
             requireContext().playNotificationSound()
         }
     }

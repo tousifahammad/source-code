@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="300"
+        app:motionInterpolator="linear">
+
+        <OnClick app:targetId="@+id/button7" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <!--<Constraint android:id="@+id/button7">
+            <Transform android:translationX="0dp" />
+        </Constraint>-->
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/linearLayout">
+            <Transform android:translationX="200dp" />
+        </Constraint>
+
+        <Constraint android:id="@+id/button7">
+            <Transform android:translationX="194dp" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
