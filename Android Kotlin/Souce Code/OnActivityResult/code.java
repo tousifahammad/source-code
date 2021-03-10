@@ -2,31 +2,33 @@ public static final int REQUEST_CODE = 1;
 
 //From activity
 
-rootView.btn_scan_barcode.setOnClickListener {
-    startActivityForResult(Intent(this, BarcodeScannerActivity::class.java), REQUEST_CODE)
-}
 
+    var resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            result.data?.let {
 
-//Now use onActivityResult to retrieve the result
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (resultCode == Activity.RESULT_OK) {
-            if(requestCode == REQUEST_CODE_BARCODE_SCANNER){
-             context?.toast(data!!.getStringExtra("key"))
             }
         }
     }
 
+	rootView.btn_scan_barcode.setOnClickListener {
+		Intent(view.context, CourseReorderActivity::class.java).apply {
+                this.putExtra("invoiceId", viewModel.invoice.id)
+                resultLauncher.launch(this)
+            }
+	}
+
+
 
 //in another activity
 
-Intent intent = getIntent();
-intent.putExtra("key", value);
-setResult(RESULT_OK, intent);
-finish();
-
+    fun onBackClick(view: View) {
+        intent.apply {
+            putExtra("sentList", vm.orderList.filter { it.sentAt != null }.toString())
+            setResult(RESULT_OK, this)
+            finish()
+        }
+    }
 
 
 

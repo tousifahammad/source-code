@@ -1,3 +1,12 @@
+
+
+lifecycleScope.launch {
+    delay(1000) 
+	// do your thing
+}
+
+
+
 Many Ways
 1. Using Handler class
 Handler().postDelayed({

@@ -1,0 +1,5 @@
+  
+  //access resources without using `Context`
+	Resources.getSystem().getString(android.R.string.somecommonstuff)
+
+  private val courseArray = context.resources.getStringArray(R.array.course)

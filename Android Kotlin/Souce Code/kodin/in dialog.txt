@@ -1,0 +1,8 @@
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
+
+class OnlineInvoiceDialog() : Dialog(mContext, R.style.RoundedCornersDialog), KodeinAware {
+
+    override val kodein by kodein()
+    private val invoiceRepository: InvoiceRepository by instance()
+}

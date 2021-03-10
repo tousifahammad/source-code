@@ -1,0 +1,23 @@
+http://landenlabs.com/android/audiodemo/audiodemo.html
+
+private fun playRawSound() {
+        try {
+            val path = ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + requireActivity().packageName.toString() + "/raw/new_online_order"
+            val soundUri: Uri = Uri.parse(path)
+            vm.mediaPlayer = MediaPlayer()
+            //vm.mediaPlayer?.setVolume(1.0f, 1.0f)
+            vm.mediaPlayer?.isLooping = true
+            vm.mediaPlayer?.setOnPreparedListener {
+                vm.mediaPlayer?.start()
+            }
+            vm.mediaPlayer?.setDataSource(requireContext(), soundUri)
+            vm.mediaPlayer?.prepare()
+        } catch (ex: Exception) {
+            ex.printStackTrace()
+        }
+    }
+
+
+//-----------------------
+vm.mediaPlayer?.release()
+vm.mediaPlayer = null

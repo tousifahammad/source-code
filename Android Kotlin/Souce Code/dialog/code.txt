@@ -1,0 +1,14 @@
+llRoot.layoutParams.apply {
+            width = ViewGroup.LayoutParams.WRAP_CONTENT
+            height = SharedMethods.getScreenResolution(mContext).second - 200
+            //height = ViewGroup.LayoutParams.WRAP_CONTENT
+            llRoot.layoutParams = this
+        }
+
+
+//
+window?.attributes?.gravity = Gravity.LEFT
+
+
+//Disable background dim on ProgressDialog/AlertDialog in Android
+myLoadingDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHI‌​ND);

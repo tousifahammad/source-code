@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/41670747/android-how-to-get-the-top-level-parent-layout-of-an-activity
