@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_title_height">60dp</dimen>
+    <dimen name="new_restaurant_dialog_width">600dp</dimen>
+    <dimen name="menucard_dialog_width">750dp</dimen>
+    <dimen name="schedule_dialog_width">800dp</dimen>
+    <dimen name="appbarHeight">42dp</dimen>
+    <dimen name="defaultInputHeight">40dp</dimen>
+    <dimen name="recyclerItemInputHeight">45dp</dimen>
+    <dimen name="formWidgetTopMargin">7dp</dimen>
+    <dimen name="appbarSubTextWidth">80dp</dimen>
+
+    //Zero Size width
+    <dimen name="zeroSize">0dp</dimen>
+    //Margin
+    <dimen name="margin_one">1dp</dimen>
+    <dimen name="margin_two">2dp</dimen>
+    <dimen name="margin_three">3dp</dimen>
+    <dimen name="margin_four">4dp</dimen>
+    <dimen name="margin_five">5dp</dimen>
+    <dimen name="margin_six">6dp</dimen>
+    <dimen name="margin_verysmall">8dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_normal">15dp</dimen>
+    <dimen name="margin_sixteen">16dp</dimen>
+    <dimen name="margin_eighteen">18dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_xlarge">24dp</dimen>
+    <dimen name="margin_thirty">30dp</dimen>
+    <dimen name="margin_option">35dp</dimen>
+    <dimen name="margin_forty">40dp</dimen>
+    <dimen name="margin_forty_two">42dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_eighty">80dp</dimen>
+    <dimen name="margin_twenty_five">25dp</dimen>
+    //Padding
+    <dimen name="padding_one">1dp</dimen>
+    <dimen name="padding_two">2dp</dimen>
+    <dimen name="padding_three">3dp</dimen>
+    <dimen name="padding_four">4dp</dimen>
+    <dimen name="padding_five">5dp</dimen>
+    <dimen name="padding_verysmall">8dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_normal">15dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_xlarge">24dp</dimen>
+    //FontSize
+    <dimen name="font_size_three">3sp</dimen>
+    <dimen name="font_size_five">5sp</dimen>
+    <dimen name="font_size_six">6sp</dimen>
+    <dimen name="font_size_eight">8sp</dimen>
+    <dimen name="font_size_nine">9sp</dimen>
+    <dimen name="font_size_ten">10sp</dimen>
+    <dimen name="font_size_verysmall">12sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_fifteen">15sp</dimen>
+    <dimen name="font_size_medium">16sp</dimen>
+    <dimen name="font_size_semi_bold">17sp</dimen>
+    <dimen name="font_size_normal">18sp</dimen>
+    <dimen name="font_size_large">20sp</dimen>
+    <dimen name="font_size_large1">24sp</dimen>
+    <dimen name="font_size_large2">28sp</dimen>
+    <dimen name="font_size_xlarge">32sp</dimen>
+    <dimen name="large_dash_title">24sp</dimen>
+    <dimen name="pin_font_size">40sp</dimen>
+    <dimen name="appbar_header_left">18.6sp</dimen>
+    //AuthActivity
+    <dimen name="loginpagebottom">60dp</dimen>
+    <dimen name="pinwidth">20dp</dimen>
+    <dimen name="pinheight">20dp</dimen>
+    <dimen name="digitwidth">70dp</dimen>
+    <dimen name="digitheight">70dp</dimen>
+    //Manage Password Dialog
+    <dimen name="dialog_loginpagebottom">60dp</dimen>
+    <dimen name="dialog_pinwidth">20dp</dimen>
+    <dimen name="dialog_pinheight">20dp</dimen>
+    <dimen name="dialog_digitwidth">70dp</dimen>
+    <dimen name="dialog_digitheight">70dp</dimen>
+    //MenuCard Dialog
+    <dimen name="menucard_width">24dp</dimen>
+    <dimen name="menucard_height">24dp</dimen>
+    <dimen name="card_height">130dp</dimen>
+    <dimen name="card_width">135dp</dimen>
+
+    <dimen name="title_height">35dp</dimen>
+    <dimen name="item_height">46dp</dimen>
+
+    <dimen name="app_bar_height">60dp</dimen>
+    <dimen name="bottom_bar_heaight">50dp</dimen>
+    <dimen name="outline_edit_text_height">60dp</dimen>
+
+    //Checkout
+    <dimen name="titleheight">60dp</dimen>
+
+    <dimen name="text_input_height">42dp</dimen>
+    <dimen name="thirty_three">33dp</dimen>
+    <dimen name="one_seven_zero">170dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+    <dimen name="three_zero_zero">300dp</dimen>
+    <dimen name="four_five_zero">450dp</dimen>
+    <dimen name="one_two_zero">80dp</dimen>
+    <dimen name="two_six_zero">220dp</dimen>
+    <dimen name="five_four_eight">548dp</dimen>
+    <dimen name="one_four_zero">140dp</dimen>
+    <dimen name="one_eight_zero">180dp</dimen>
+    <!--
+    Because the window insets on round devices are larger than 15dp, this padding only applies
+    to square screens.
+    -->
+    <dimen name="box_inset_layout_padding">0dp</dimen>
+
+    <!--
+    This padding applies to both square and round screens. The total padding between the buttons
+    and the window insets is box_inset_layout_padding (above variable) on square screens and
+    inner_frame_layout_padding (below variable) on round screens.
+    -->
+    <dimen name="inner_frame_layout_padding">5dp</dimen>
+    //height
+    <dimen name="forty_five">45dp</dimen>
+    <dimen name="fifty_five">55dp</dimen>
+    <dimen name="sixty">60dp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="one_three_zero">130dp</dimen>
+    <dimen name="thirty_five">35dp</dimen>
+    <dimen name="two_zero_zero">200dp</dimen>
+    <dimen name="twenty_five">25dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="one_zero_zero">100dp</dimen>
+    <dimen name="forty">40dp</dimen>
+    <dimen name="thirty_eight">38dp</dimen>
+
+
+</resources>

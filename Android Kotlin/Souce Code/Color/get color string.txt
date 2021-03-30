@@ -1,0 +1,1 @@
+val tableColor:String = "#${Integer.toHexString(ContextCompat.getColor(requireContext(), R.color.reserved))}"
