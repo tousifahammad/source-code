@@ -9,3 +9,26 @@
             .setNegativeButton("Not now", null)
             .show();
     }
+	
+	
+	inline fun Context.alertDialog(message: String = "", title: String = "", positiveMsg: String = "Yes", cancelable: Boolean = true, crossinline positiveFun: () -> Unit = {}, crossinline negativeFun: () -> Unit = {}) {
+		MaterialAlertDialogBuilder(this, R.style.AlertDialogTheme).apply {
+			if (title.isNotEmpty()) setTitle(title)
+			if (message.isNotEmpty()) setMessage(message)
+			setCancelable(cancelable)
+			setPositiveButton(positiveMsg) { _, _ ->
+				positiveFun()
+			}
+			setNegativeButton("No") { _, _ ->
+				negativeFun()
+			}
+			show()
+		}
+	}
+
+
+	fun logout(context: Context) {
+        context.alertDialog("Do you want to logout? ", positiveMsg = "Logout", positiveFun = {
+            context.gotToActivityWithoutStack(AuthActivity::class.java)
+        })
+    }

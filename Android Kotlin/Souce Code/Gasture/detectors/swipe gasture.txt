@@ -1,0 +1,1 @@
+https://www.tutorialspoint.com/how-to-handle-swipe-gestures-in-kotlin

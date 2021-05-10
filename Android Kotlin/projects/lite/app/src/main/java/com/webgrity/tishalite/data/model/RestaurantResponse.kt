@@ -1,0 +1,33 @@
+package com.webgrity.tishalite.data.model
+
+data class RestaurantResponse(
+    val address: String,
+    val backupFlag: Int,
+    val businessRegistrationDetails: String,
+    val city: String,
+    val country: String,
+    val countryCode: String,
+    val createdAt: String,
+    val deviceInfo: String,
+    val email: String,
+    val ezeeHeaderColor: Int,
+    val ezeeTextColor: Int,
+    val facebook: String,
+    val id: Int,
+    val instagram: String,
+    val licenceExpiryDate: String,
+    val licenceKey: String,
+    val menuPreference: Int,
+    val merchantKey: String,
+    val name: String,
+    val phoneNo: String,
+    val pinCode: String,
+    val state: String,
+    val status: Int,
+    val timezone: String,
+    val twitter: Any,
+    val urbanpiper_enable: Int,
+    val userId: Int,
+    val uuid: String,
+    val website: String
+)

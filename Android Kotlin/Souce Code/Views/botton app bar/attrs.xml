@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SmoothBottomBar">
+        <attr name="bar_background" format="color" />
+        <attr name="bar_selectorColor" format="color" />
+        <attr name="bar_textColor" format="color" />
+    </declare-styleable>
+</resources>

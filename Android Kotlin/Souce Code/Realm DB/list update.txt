@@ -1,0 +1,14 @@
+suspend fun updateList(invoiceList: MutableList<Invoice>, mRealm: Realm? = null) {
+        withContext(Dispatchers.Main) {
+            val realm = mRealm ?: AppDatabase.getRealmInstance()
+            try {
+                realm.executeTransaction {
+                    it.insertOrUpdate(invoiceList)
+                }
+            } catch (error: Exception) {
+                error.printStackTrace()
+            } finally {
+                if (mRealm == null) realm.close()
+            }
+        }
+    }

@@ -1,8 +1,10 @@
-package net.simplifiedcoding.mvvmsampleapp.data.preferences
+package com.webgrity.tishakds.data.preferences
 
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
+import com.google.gson.Gson
+import java.lang.reflect.Type
 
 
 class PreferenceProvider(context: Context) {
@@ -11,7 +13,14 @@ class PreferenceProvider(context: Context) {
         get() = PreferenceManager.getDefaultSharedPreferences(appContext)
 
     companion object {
-        private const val CURRENT_USER_ID = "CURRENT_USER_ID"
+        const val SERVER_IP_ADDRESS = "SERVER_IP_ADDRESS"
+        const val WARNING_TIME = "WARNING_TIME"
+        const val ALERT_TIME = "ALERT_TIME"
+        const val COOKING_TIME_INDICATOR = "COOKING_TIME_INDICATOR"
+        const val LAST_LOGIN_DATE = "LAST_LOGIN_DATE"
+        const val LAST_INVOICE_SIZE = "LAST_INVOICE_SIZE"
+        const val MODIFIER_IN_RED = "MODIFIER_IN_RED"
+        const val IP_ADDRESS = "IP_ADDRESS"
     }
 
 
@@ -23,12 +32,16 @@ class PreferenceProvider(context: Context) {
         return preference.getString(key, null)
     }
 
+    fun deleteKey(key: String) {
+        preference.edit().remove(key).apply()
+    }
+
 
     fun saveBoolean(key: String, value: Boolean) {
         preference.edit().putBoolean(key, value).apply()
     }
 
-    fun getBoolean(key: String): Boolean? {
+    fun getBoolean(key: String): Boolean {
         return preference.getBoolean(key, false)
     }
 
@@ -36,7 +49,7 @@ class PreferenceProvider(context: Context) {
         preference.edit().putInt(key, value).apply()
     }
 
-    fun getInt(key: String): Int? {
+    fun getInt(key: String): Int {
         return preference.getInt(key, 0)
     }
 
@@ -45,7 +58,7 @@ class PreferenceProvider(context: Context) {
         preference.edit().putFloat(key, value).apply()
     }
 
-    fun getFloat(key: String): Float? {
+    fun getFloat(key: String): Float {
         return preference.getFloat(key, 0f)
     }
 
@@ -54,18 +67,18 @@ class PreferenceProvider(context: Context) {
         preference.edit().putLong(key, value).apply()
     }
 
-    fun getLong(key: String): Long? {
+    fun getLong(key: String): Long {
         return preference.getLong(key, 0)
     }
-	
-	fun saveArrayList(key: String, list: ArrayList<String>) {
+
+    fun saveArrayList(key: String, list: ArrayList<String>) {
         val json: String = Gson().toJson(list)
         preference.edit().putString(key, json).apply()
     }
 
     fun getArrayList(key: String): ArrayList<String> {
         var list = ArrayList<String>()
-        val type: Type = object : TypeToken<ArrayList<String>>() {}.type
+        val type: Type = object : com.google.gson.reflect.TypeToken<ArrayList<String>>() {}.type
         preference.getString(key, null)?.let {
             list = Gson().fromJson(it, type)
         }

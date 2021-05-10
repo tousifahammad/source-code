@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "858482637540",
+    "firebase_url": "https://tisha-f806c.firebaseio.com",
+    "project_id": "tisha-f806c",
+    "storage_bucket": "tisha-f806c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858482637540:android:2dae7d13912cf4f12a0af1",
+        "android_client_info": {
+          "package_name": "com.webgrity.tisha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858482637540-rdr0g7mbo1pf4f0m276hemgapenm4q2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV9d7NSUClVCunHxyfMu4JStZJo-d88qA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858482637540-rdr0g7mbo1pf4f0m276hemgapenm4q2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858482637540:android:8cade188c113a9e22a0af1",
+        "android_client_info": {
+          "package_name": "com.webgrity.tishalite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858482637540-rdr0g7mbo1pf4f0m276hemgapenm4q2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV9d7NSUClVCunHxyfMu4JStZJo-d88qA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858482637540-rdr0g7mbo1pf4f0m276hemgapenm4q2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

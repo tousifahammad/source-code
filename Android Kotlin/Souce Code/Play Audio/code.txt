@@ -21,3 +21,21 @@ private fun playRawSound() {
 //-----------------------
 vm.mediaPlayer?.release()
 vm.mediaPlayer = null
+
+
+//=================================
+private fun playRawSound() {
+        trycatch {
+            vm.mediaPlayer?.run { if (isPlaying) return }
+            val path = ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + packageName.toString() + "/raw/new_online_order"
+            val soundUri: Uri = Uri.parse(path)
+            vm.mediaPlayer = MediaPlayer()
+            //vm.mediaPlayer?.setVolume(1.0f, 1.0f)
+            vm.mediaPlayer?.isLooping = true
+            vm.mediaPlayer?.setOnPreparedListener {
+                vm.mediaPlayer?.start()
+            }
+            vm.mediaPlayer?.setDataSource(this, soundUri)
+            vm.mediaPlayer?.prepare()
+        }
+    }
